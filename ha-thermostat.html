@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('HA Thermostat', {
+        category: 'Home Automation',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "HA Thermostat";
+        }
+    });
+
+</script>
+
+<script type="text/x-red" data-template-name="HA Thermostat">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <br>
+        <label for="node-input-highTemp" style="color:blue"><i class="fa fa-arrow-circle-o-down"></i> High Temp</label>
+        <input type="text" id="node-input-highTemp" placeholder="75">
+        <br>
+        <label for="node-input-lowTemp" style="color:red"><i class="fa fa-arrow-circle-o-up"></i> Low Temp</label>
+        <input type="text" id="node-input-lowTemp" placeholder="75">
+
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="HA Thermostat">
+    <p>A thermostat for home automation purposes.</p>
+    <p>Name: description here</p>
+    <p>High Temp: The temperature (currently in Farenheight) at which the air conditioner will begin to cool your home.</p>
+    <p>Low Temp: The temperature (currently in Farenheight) at which the air conditioner will begin to heat your home.</p>
+</script>
