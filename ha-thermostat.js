@@ -11,3 +11,5 @@ module.exports = function (RED) {
     }
     RED.nodes.registerType("HA Thermostat", haThermostat);
 };
+
+//https://cache.freescale.com/files/microcontrollers/doc/ref_manual/DRM106.pdf
